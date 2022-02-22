@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0-kubernetes-%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%89%E7%AB%A0-kubernetes-api%E5%BC%80%E5%8F%91/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-operator%E5%BC%80%E5%8F%91/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%BA%94%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E5%B1%95%E6%9C%9B/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/kubernetes%E6%9E%B6%E6%9E%84%E5%9B%BE/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/kubernetes%E7%BB%84%E4%BB%B6/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/categories/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/docs/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/</loc>
+  </url><url>
+    <loc>https://william-lbn.github.io/kubernetes/tags/</loc>
+  </url>
+</urlset>

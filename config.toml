@@ -1,0 +1,5 @@
+baseURL = "https://william-lbn.github.io/kubernetes/"
+languageCode = "en-us"
+title = "kubernetes二次开发指南"
+theme = "hugo-book"
+publishDir = "docs"

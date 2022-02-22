@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="test #  ">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="test #  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/kubernetes%E6%9E%B6%E6%9E%84%E5%9B%BE/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Kubernetes架构图 | kubernetes二次开发指南</title>
+<link rel="manifest" href="/kubernetes/manifest.json">
+<link rel="icon" href="/kubernetes/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/kubernetes/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/kubernetes/flexsearch.min.js"></script>
+  <script defer src="/kubernetes/en.search.min.d9681525e0d3e756e0ea79974ae23cdc0fc33635ec77970e469465a55caae0d3.js" integrity="sha256-2WgVJeDT51bg6nmXSuI83A/DNjXsd5cORpRlpVyq4NM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/kubernetes/"><span>kubernetes二次开发指南</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/" class="">第一章 kubernetes 简介</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4ecb868bed53a51a1b6fa7931c5a7089" class="toggle"  />
+    <label for="section-4ecb868bed53a51a1b6fa7931c5a7089" class="flex justify-between">
+      <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/" class="">1.1 kubernetes发展历史</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c2ebc5838e7fe51af1d100b3a9f68d8" class="toggle" checked />
+    <label for="section-3c2ebc5838e7fe51af1d100b3a9f68d8" class="flex justify-between">
+      <a role="button" class="">1.2 kubernetes架构</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/kubernetes%E6%9E%B6%E6%9E%84%E5%9B%BE/" class=" active">Kubernetes架构图</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/kubernetes%E6%9E%B6%E6%9E%84/kubernetes%E7%BB%84%E4%BB%B6/" class="">Kubernetes组件</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5ff50b2d07c064c3c86abf37e4726c10" class="toggle"  />
+    <label for="section-5ff50b2d07c064c3c86abf37e4726c10" class="flex justify-between">
+      <a role="button" class="">1.3 kubernetes展望</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0-kubernetes-%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/" class="">第二章 kubernetes 集群搭建</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%89%E7%AB%A0-kubernetes-api%E5%BC%80%E5%8F%91/" class="">第三章 kubernetes API开发</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-operator%E5%BC%80%E5%8F%91/" class="">第四章 kubernetes operator开发</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/kubernetes/docs/%E7%AC%AC%E4%BA%94%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/" class="">第五章 kubernetes kubelet开发</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/kubernetes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Kubernetes架构图</strong>
+
+  <label for="toc-control">
+    
+    <img src="/kubernetes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="test">
+  test
+  <a class="anchor" href="#test">#</a>
+</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
