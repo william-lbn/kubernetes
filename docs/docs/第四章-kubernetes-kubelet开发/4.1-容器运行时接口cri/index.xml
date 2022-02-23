@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4.1 容器运行时接口CRI on kubernetes二次开发指南</title>
+    <link>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/</link>
+    <description>Recent content in 4.1 容器运行时接口CRI on kubernetes二次开发指南</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

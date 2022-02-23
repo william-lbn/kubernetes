@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-weight: 20
+weight: 1
 title: "1.1 kubernetes发展历史"
 ---
 

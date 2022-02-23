@@ -1,5 +1,5 @@
 ---
 bookCollapseSection: true
-weight: 20
+weight: 2
 title: "1.2 kubernetes架构"
 ---

@@ -1,5 +1,5 @@
 ---
 bookCollapseSection: true
-weight: 20
+weight: 3
 title: "1.3 kubernetes展望"
 ---

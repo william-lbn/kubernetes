@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 5
 bookFlatSection: true
 title: "第一章 kubernetes 简介"
 ---
