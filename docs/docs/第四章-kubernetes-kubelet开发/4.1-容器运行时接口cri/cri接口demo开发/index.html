@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kubernetes源于 Google 内部的 Borg 项目，经 Google 使用 Go 语言重写后，被命名为 Kubernetes，并于 2014 年 6 月开源。
-Kubernetes 希腊语为“舵手”，致力于管理数以万计的容器集群，开源之前在 Google 内部的项目名为“九之七项目”（Project Seven of Nine），这也正是 Kubernetes 的 Logo 有七条边的寓意。">
+<meta name="description" content="Introduction #  ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="1.1 kubernetes发展历史" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/1.1-kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="4.1.6 CRI接口Demo开发" />
+<meta property="og:description" content="Introduction #  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3demo%E5%BC%80%E5%8F%91/" /><meta property="article:section" content="docs" />
 
-<title>1.1 kubernetes发展历史 | kubernetes二次开发指南</title>
+
+
+<title>4.1.6 CRI接口Demo开发 | kubernetes二次开发指南</title>
 <link rel="manifest" href="/kubernetes/manifest.json">
 <link rel="icon" href="/kubernetes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/kubernetes/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/kubernetes/flexsearch.min.js"></script>
   <script defer src="/kubernetes/en.search.min.9031e03e5f1e6f80afa5b8bae3bdda7bbcc07176388c51cac00f958c3514b39e.js" integrity="sha256-kDHgPl8eb4Cvpbi6473ae7zAcXY4jFHKwA&#43;VjDUUs54=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/1.1-kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/index.xml" title="kubernetes二次开发指南" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -100,9 +100,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-a45696c7f22c5e86ab3d40437970d542" class="toggle" checked />
+    <input type="checkbox" id="section-a45696c7f22c5e86ab3d40437970d542" class="toggle"  />
     <label for="section-a45696c7f22c5e86ab3d40437970d542" class="flex justify-between">
-      <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/1.1-kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/" class="active">1.1 kubernetes发展历史</a>
+      <a href="/kubernetes/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0-kubernetes-%E7%AE%80%E4%BB%8B/1.1-kubernetes%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2/" class="">1.1 kubernetes发展历史</a>
     </label>
   
 
@@ -243,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="toggle"  />
+    <input type="checkbox" id="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="toggle" checked />
     <label for="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="flex justify-between">
       <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/" class="">4.1 容器运行时接口CRI</a>
     </label>
@@ -324,7 +324,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3demo%E5%BC%80%E5%8F%91/" class="">4.1.6 CRI接口Demo开发</a>
+    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3demo%E5%BC%80%E5%8F%91/" class=" active">4.1.6 CRI接口Demo开发</a>
   
 
         </li>
@@ -418,7 +418,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/kubernetes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>1.1 kubernetes发展历史</strong>
+  <strong>4.1.6 CRI接口Demo开发</strong>
 
   <label for="toc-control">
     
@@ -443,8 +443,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>Kubernetes源于 Google 内部的 Borg 项目，经 Google 使用 Go 语言重写后，被命名为 Kubernetes，并于 2014 年 6 月开源。</p>
-<p>Kubernetes 希腊语为“舵手”，致力于管理数以万计的容器集群，开源之前在 Google 内部的项目名为“九之七项目”（Project Seven of Nine），这也正是 Kubernetes 的 Logo 有七条边的寓意。</p>
+  <article class="markdown"><h1 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h1>
 </article>
  
       
