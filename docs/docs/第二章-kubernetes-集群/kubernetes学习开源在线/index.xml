@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2.1 kubernetes学习开源在线 on kubernetes二次开发指南</title>
+    <link>https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0-kubernetes-%E9%9B%86%E7%BE%A4/kubernetes%E5%AD%A6%E4%B9%A0%E5%BC%80%E6%BA%90%E5%9C%A8%E7%BA%BF/</link>
+    <description>Recent content in 2.1 kubernetes学习开源在线 on kubernetes二次开发指南</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0-kubernetes-%E9%9B%86%E7%BE%A4/kubernetes%E5%AD%A6%E4%B9%A0%E5%BC%80%E6%BA%90%E5%9C%A8%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
