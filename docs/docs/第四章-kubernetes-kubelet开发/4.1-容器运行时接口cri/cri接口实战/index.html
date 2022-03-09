@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Introduction #  ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="4.2 容器网络接口CNI" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.2-%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3cni/" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="4.1.5 CRI接口实战" />
+<meta property="og:description" content="Introduction #  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3%E5%AE%9E%E6%88%98/" /><meta property="article:section" content="docs" />
 
-<title>4.2 容器网络接口CNI | kubernetes二次开发指南</title>
+
+
+<title>4.1.5 CRI接口实战 | kubernetes二次开发指南</title>
 <link rel="manifest" href="/kubernetes/manifest.json">
 <link rel="icon" href="/kubernetes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/kubernetes/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/kubernetes/flexsearch.min.js"></script>
   <script defer src="/kubernetes/en.search.min.89be44f9fd7bed99b11f27da0a3f8ab32c274a3c3c83f78d29b61190ee46c8a9.js" integrity="sha256-ib5E&#43;f177ZmxHyfaCj&#43;KsywnSjw8g/eNKbYRkO5GyKk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.2-%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3cni/index.xml" title="kubernetes二次开发指南" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -347,7 +348,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="toggle"  />
+    <input type="checkbox" id="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="toggle" checked />
     <label for="section-e6fd7e3ef0f4191b8fca2941dd1b3557" class="flex justify-between">
       <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/" class="">4.1 容器运行时接口CRI</a>
     </label>
@@ -415,7 +416,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3%E5%AE%9E%E6%88%98/" class="">4.1.5 CRI接口实战</a>
+    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3%E5%AE%9E%E6%88%98/" class=" active">4.1.5 CRI接口实战</a>
   
 
         </li>
@@ -433,9 +434,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-8e6b4576242deaed6e4438f1e7abaf59" class="toggle" checked />
+    <input type="checkbox" id="section-8e6b4576242deaed6e4438f1e7abaf59" class="toggle"  />
     <label for="section-8e6b4576242deaed6e4438f1e7abaf59" class="flex justify-between">
-      <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.2-%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3cni/" class="active">4.2 容器网络接口CNI</a>
+      <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.2-%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3cni/" class="">4.2 容器网络接口CNI</a>
     </label>
   
 
@@ -509,7 +510,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/kubernetes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>4.2 容器网络接口CNI</strong>
+  <strong>4.1.5 CRI接口实战</strong>
 
   <label for="toc-control">
     

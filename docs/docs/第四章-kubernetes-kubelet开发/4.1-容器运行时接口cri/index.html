@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="容器运行时接口 (CRI) 是一个插件接口，它允许 kubelet（在 Kubernetes 集群中的每个节点上运行的代理）使用多种容器运行时。容器运行时是现代容器化架构的基础组件。
-CRI 最初是在 Kubernetes v1.5 中引入的。在引入 CRI 之前，rkt 和 Docker 是直接集成到 kubelet 的源代码中的。这使得将新的容器运行时与 Kubernetes 集成变得困难。 CRI 使 Kubernetes 用户能够轻松使用多个容器运行时，并使容器运行时的开发人员能够轻松地将它们与 Kubernetes 生态系统集成。">
+<meta name="description" content="容器运行时是现代容器化架构的基础组件，容器运行时接口 (CRI) 是一个插件接口，它允许 kubelet（Kubernetes 集群中每个节点上运行的代理）使用多种容器运行时。
+CRI 最初是在 Kubernetes v1.5 中引入的；在引入 CRI 之前，kubernetes 直接将rkt 和 Docker 集成到 kubelet 的源代码中的，这使得用户将新的容器运行时与 Kubernetes 集成变得异常困难。 CRI就是在这种背景下诞生的，一方面kubernetes抽象出通用插件接口，专注于调度等功能，一方面，将适配工作下沉到了各个容器运行时开发人员。CRI 使 Kubernetes 用户能够轻松使用多个容器运行时，并使容器运行时的开发人员能够轻松地将它们与 Kubernetes 生态系统集成。">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="4.1 容器运行时接口CRI" />
 <meta property="og:description" content="" />
@@ -16,7 +16,7 @@ CRI 最初是在 Kubernetes v1.5 中引入的。在引入 CRI 之前，rkt 和 D
 <link rel="icon" href="/kubernetes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/kubernetes/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/kubernetes/flexsearch.min.js"></script>
-  <script defer src="/kubernetes/en.search.min.b0f818842a5662e322d8c1507ab56aa643676a05dfcb91681794f54715d0a0b7.js" integrity="sha256-sPgYhCpWYuMi2MFQerVqpkNnagXfy5FoF5T1RxXQoLc=" crossorigin="anonymous"></script>
+  <script defer src="/kubernetes/en.search.min.89be44f9fd7bed99b11f27da0a3f8ab32c274a3c3c83f78d29b61190ee46c8a9.js" integrity="sha256-ib5E&#43;f177ZmxHyfaCj&#43;KsywnSjw8g/eNKbYRkO5GyKk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://william-lbn.github.io/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/index.xml" title="kubernetes二次开发指南" />
 <!--
 Made with Book Theme
@@ -416,20 +416,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri-o%E8%AF%A6%E8%A7%A3/" class="">4.1.5 CRI-O详解</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3demo%E5%BC%80%E5%8F%91/" class="">4.1.6 CRI接口Demo开发</a>
+    <a href="/kubernetes/docs/%E7%AC%AC%E5%9B%9B%E7%AB%A0-kubernetes-kubelet%E5%BC%80%E5%8F%91/4.1-%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8E%A5%E5%8F%A3cri/cri%E6%8E%A5%E5%8F%A3%E5%AE%9E%E6%88%98/" class="">4.1.5 CRI接口实战</a>
   
 
         </li>
@@ -548,8 +535,8 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>容器运行时接口 (CRI) 是一个插件接口，它允许 kubelet（在 Kubernetes 集群中的每个节点上运行的代理）使用多种容器运行时。容器运行时是现代容器化架构的基础组件。</p>
-<p>CRI 最初是在 Kubernetes v1.5 中引入的。在引入 CRI 之前，rkt 和 Docker 是直接集成到 kubelet 的源代码中的。这使得将新的容器运行时与 Kubernetes 集成变得困难。 CRI 使 Kubernetes 用户能够轻松使用多个容器运行时，并使容器运行时的开发人员能够轻松地将它们与 Kubernetes 生态系统集成。</p>
+  <article class="markdown"><p>容器运行时是现代容器化架构的基础组件，容器运行时接口 (CRI) 是一个插件接口，它允许 kubelet（Kubernetes 集群中每个节点上运行的代理）使用多种容器运行时。</p>
+<p>CRI 最初是在 Kubernetes v1.5 中引入的；在引入 CRI 之前，kubernetes 直接将rkt 和 Docker 集成到 kubelet 的源代码中的，这使得用户将新的容器运行时与 Kubernetes 集成变得异常困难。 CRI就是在这种背景下诞生的，一方面kubernetes抽象出通用插件接口，专注于调度等功能，一方面，将适配工作下沉到了各个容器运行时开发人员。CRI 使 Kubernetes 用户能够轻松使用多个容器运行时，并使容器运行时的开发人员能够轻松地将它们与 Kubernetes 生态系统集成。</p>
 </article>
  
       
